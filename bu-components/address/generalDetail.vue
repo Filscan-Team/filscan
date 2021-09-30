@@ -1,0 +1,87 @@
+<template>
+  <div class="radius bottom-20 account-common">
+    <div class="common-top">
+      <div class="bottom-20">
+        <co-nav-title :title="tr('titleAcount')"></co-nav-title>
+      </div>
+      <co-overview :dataList="dataList" :dataLabel="dataLabel" :type="type" />
+    </div>
+    <general-balance />
+    <div class="block-list-con top-20">
+      <co-tab :labels="blockFlag ? $t('address.radio') : $t('address.radio1')" @click="changeRadio" />
+      <message-list v-if="activeRadio === 0" :address="$route.query.address" :subAddress="subAddress" showExtra showSelect type="address" />
+      <co-block-list v-else-if="activeRadio === 1 && blockFlag" />
+      <co-transfer-list v-else />
+    </div>
+  </div>
+</template>
+<script>
+import { mapGetters } from 'vuex'
+import mixin from '@/bu-components/address/mixin'
+import GeneralBalance from '@/bu-components/address/chart/GeneralBalance'
+export default {
+  name: 'GeneralDetail',
+  components: {
+    GeneralBalance
+  },
+  mixins: [mixin],
+  data() {
+    return {
+      blockFlag: true,
+      routerAddress: '',
+      activeRadio: 0, // 列表激活项
+      address: '',
+      subAddress: '',
+      perfix: 'address.detail'
+    }
+  },
+  computed: {
+    ...mapGetters('address', ['type', 'dataList', 'dataLabel'])
+  },
+  mounted() {
+    this.getBlockFlag()
+  },
+  methods: {
+    changeRadio(e) {
+      this.activeRadio = e
+    },
+    async getBlockFlag() {
+      let add = this.$route.query.address
+      let params = {
+        miner: [add],
+        count: 25,
+        begindex: 0
+      }
+      try {
+        let data = await this.$api.getBlockByMiner([params])
+        this.blockFlag = data&&data.blocks!==null ? true : false
+      } catch (e) {
+        this.blockFlag = e.result == null ? false : true
+        console.log(e)
+      }
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+.account-common {
+  .common-top {
+    background-color: var(--content-bg-color);
+    padding: 0 20px 20px 20px;
+    margin-bottom: 16px;
+    &::v-deep .detail-info-con {
+      .info-item {
+        div {
+          .link-list a {
+            display: inline-block !important;
+          }
+        }
+      }
+    }
+  }
+  .block-list-con {
+    background-color: var(--content-bg-color);
+    padding: 20px;
+  }
+}
+</style>

@@ -1,0 +1,22 @@
+diff --git a/node_modules/postcss-pxtorem/index.js b/node_modules/postcss-pxtorem/index.js
+index d4e12fa..7ac4061 100644
+--- a/node_modules/postcss-pxtorem/index.js
++++ b/node_modules/postcss-pxtorem/index.js
+@@ -40,10 +40,16 @@ module.exports = postcss.plugin("postcss-pxtorem", options => {
+       return;
+     }
+ 
+-    const rootValue =
++    let rootValue =
+       typeof opts.rootValue === "function"
+         ? opts.rootValue(css.source.input)
+         : opts.rootValue;
++    if (filePath.indexOf("\/pages\/mobile") > -1 || filePath.indexOf("\/coinmobile") > -1) {
++        // console.log(" mobile client adapting:", rootValue + " | " + filePath);
++      }else {
++        rootValue = opts.rootValuePC;
++        // console.log(" pc client adapting:", rootValue + " | " + filePath);
++      }
+     const pxReplace = createPxReplace(
+       rootValue,
+       opts.unitPrecision,

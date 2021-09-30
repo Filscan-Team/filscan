@@ -1,0 +1,214 @@
+:root{
+    --font-14: 14px;
+    --font-16: 16px;
+    --font-18: 18px;
+    --font-20: 20px;
+    --font-22: 22px;
+    --font-24: 24px;
+/*    --main-bg-color:#F5F5F5;*/
+/*    --main-text-color:black;*/
+/*    --scroll-bg-color:rgba(0,0,0,.5);*/
+/*    --logo-text-color:#40CAD4;*/
+/*    --search-bg-color:#132E3D;*/
+/*    --search-text-color:#A3A3A3;*/
+/*    --force-mark-color:#F3921B;*/
+
+/*    --text-gray-color:black;*/
+/*    --total-board-bottom-color:#014579;*/
+
+/*    --block-min-color:#0185D8;*/
+/*    --block-size-color:#6A0CE0;*/
+/*    --total-power-color:#F7B500;*/
+/*    --total-quality-power-color:#06C7F4;*/
+
+/*    --null-block-bg-color:#d8d8d8;*/
+/*    --ticket-block-bg-color:#0091ff;*/
+/*    --other-block-border-color:#0091ff;*/
+
+/*    --border-color:#eee;*/
+/*    --footer-text-color:#333;*/
+/*    --board-bg-color:white;*/
+/*    --board-item-bg-color:#0F1F2F;*/
+
+/*    --overview-bg-color:white;*/
+/*    --overview-bg-dark-color:#F5F7FA;*/
+
+/*    --general-title-bg-color:white;*/
+/*    --general-title-text-color:black;*/
+
+/*    --message-list-method-bg-color:white;*/
+/*    --message-list-method-text-color:black;*/
+
+/*    --overview-text-color:black;*/
+/*    --link-color:#0062ff;*/
+/*    --white:#fff;*/
+/*    --table-header-bg-color:white;*/
+/*    --table-header-border-color:#EBEEF5;*/
+/*    --table-header-text-color:black;*/
+/*    --table-row-bg-color:white;*/
+/*    --table-row-hover-bg-color:#85CBFF;*/
+/*    --table-row-extra-text-color:#999;*/
+/*    --table-row-hover-extra-text-color:#fff;*/
+/*    --table-row-extra-color:#14314B;*/
+/*    --table-row-hover-extra-color:#0B1926;*/
+/*    --table-row-hover-text-color:white;*/
+/*    --table-row-striped-bg-color:#F5F7FA;*/
+/*    */
+}
+:root #app[theme='dark']{
+    --main-width: 1600px;
+    --main-bg-color:#0A0D13;
+    --content-bg-color: #122639;
+    --main-text-color:white;
+    --select-shadow: black;
+    --scroll-bg-color:#747B81;
+    --logo-text-color:#0090ff;
+    --search-bg-color:#132E3D;
+    --input-bg-color:#132E3D;
+    --search-text-color:#667278;
+    --force-mark-color:#F3921B;
+    --mark-opacity: #122639;
+    --nav-down: url('../image/mobile/arrawdownl@2x.png');
+    --tag-name-color: #ffffff;
+    --meta-bg-color: #122639;
+
+    --text-gray-color:#ccc;
+    --total-board-bottom-color:#FFF;
+
+    --block-min-color:#0185D8;
+    --block-size-color:#F7B500;
+    --total-power-color:#F93C53;
+    --total-quality-power-color:#3BFFFF;
+
+    --block-meta-item-label: #ccc;
+    --block-meta-item-bg-color: #122639;
+    --block-meta-item-border-color: rgba(255,255,255,0.40);
+    --block-meta-item-shadow: #112a40;
+
+    --null-block-bg-color:#6A6A6A;
+    --ticket-block-bg-color:#F3921B;
+    --other-block-border-color:#F3921B;
+    --tooltip-block-bg-color: #42cbd3;
+    --block-icon-bg-color: rgba(255,255,255,0.20);
+    --block-icon-color: #ffffff;
+
+    --bc-search: #102835;
+    --footer-text-color:#333;
+    --board-bg-color:#0B1926;
+    --board-item-bg-color:#0F1F2F;
+    --overview-bg-color:#121A23;
+    --overview-bg-dark-color:#0B0E13;
+    --general-title-bg-color:white;
+    --general-title-text-color:black;
+    --message-list-method-bg-color:white;
+    --message-list-method-text-color:black;
+    --overview-text-color:white;
+    --link-color:#42CBD3;
+    --white:#fff;
+    --table-header-bg-color:#0F1F2F;
+    --table-header-border-color:rgba(21,53,80,0.5);
+    --table-header-text-color:white;
+    --table-row-bg-color:#0F1F2F;
+    --table-row-hover-bg-color:#254B6E;
+    --table-row-extra-text-color:#999;
+    --table-row-hover-extra-text-color:#fff;
+    --table-row-extra-color:#14314B;
+    --table-row-hover-extra-color:#0B1926;
+    --table-row-hover-text-color:white;
+    --table-row-striped-bg-color:#10151F;
+    --border-color:#153550;
+    --border-line: #253B50;
+
+    --calculator-text-color: #ffffff;
+    --login-checkbox-border: #ffffff;
+    --monitor-input-border: #2b4258;
+    --monitor-menu-item-active-color: #f3921b;
+    --monitor-menu-active-color: #ffffff;
+    --monitor-content-color: #ffffff;
+    --download-btn-bg: #1a344d;
+    --minitor-notice-btn-border: #2b4258;
+    --minitor-notice-add-icon: url('../image/forcepool/notice/add1@2x.png');
+    --minitor-notice-delete-icon: url('../image/forcepool/notice/delete1@2x.png');
+    --minitor-list-setup: url('../image/forcepool/monitor/setup1@2x.png');
+}
+
+:root #app[theme='light']{
+    --main-width: 1600px;
+    --main-bg-color: #F1F6FD;
+    --content-bg-color: white;
+    --main-text-color:#333333;
+    --select-shadow: rgba(177,177,177,0.50);
+    --scroll-bg-color:rgba(0,0,0,.5);
+    --logo-text-color:#40CAD4;
+    --search-bg-color:white;
+    --input-bg-color: #f7f7f7;
+    --search-text-color:#A3A3A3;
+    --force-mark-color:#F3921B;
+    --mark-opacity: #ffffff;
+    --nav-down: url('../image/mobile/arrawdown@2x.png');
+    --tag-name-color: #333333;
+    /*--text-gray-color:#F3921B;*/
+    --text-gray-color:black;
+    --total-board-bottom-color:#014579;
+
+    --block-min-color:#0185D8;
+    --block-size-color:#6A0CE0;
+    --total-power-color:#F7B500;
+    --total-quality-power-color:#06C7F4;
+
+    --block-meta-item-label: black;
+    --block-meta-item-bg-color: #F1F6FD;
+    --block-meta-item-border-color: #F1F6FD;
+    --block-meta-item-shadow: #F5F5F5;
+
+    --null-block-bg-color:#6A6A6A;
+    --ticket-block-bg-color:#0091ff;
+    --other-block-border-color:#0091ff;
+    --tooltip-block-bg-color: #0090ff;
+    --block-icon-bg-color: rgba(0,0,0,0.20);
+    --block-icon-color: #ffffff;
+
+    --border-color:#eee;
+    --footer-text-color:#333;
+    --board-bg-color:white;
+    --board-item-bg-color:#F5F5F5;
+
+    --overview-bg-color:white;
+    --overview-bg-dark-color:#F5F7FA;
+
+    --general-title-bg-color:white;
+    --general-title-text-color:black;
+
+    --message-list-method-bg-color:white;
+    --message-list-method-text-color:black;
+
+    --bc-search: #ffffff;
+    --border-line: #E6E6E6;
+    --dsn-color: #F8F8F8;
+    --overview-text-color:black;
+    --link-color:#0090FF;
+    --white:#fff;
+    --table-header-bg-color:white;
+    --table-header-border-color:#EBEEF5;
+    --table-header-text-color:black;
+    --table-row-bg-color:white;
+    --table-row-hover-bg-color:#85CBFF;
+    --table-row-extra-text-color:#F3921B;
+    --table-row-hover-extra-text-color:#fff;
+    --table-row-extra-color:#FDE9D1;
+    --table-row-hover-extra-color: #FF8C00;
+    --table-row-hover-text-color:white;
+    --table-row-striped-bg-color:#F5F7FA;
+
+    --calculator-text-color: #eeeeee;
+    --login-checkbox-border: #cecece;
+    --monitor-input-border: #e6e6e6;
+    --monitor-menu-item-active-color: #fff9f1;
+    --monitor-menu-active-color: #f3921b;
+    --monitor-content-color: #666666;
+    --download-btn-bg: #fff9f1;
+    --minitor-notice-btn-border: #cecece;
+    --minitor-notice-add-icon: url('../image/forcepool/notice/add@2x.png');
+    --minitor-notice-delete-icon: url('../image/forcepool/notice/delete@2x.png');
+    --minitor-list-setup: url('../image/forcepool/monitor/setup@2x.png');
+}
